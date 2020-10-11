@@ -32,7 +32,7 @@ function setup() {
   for (let i = 0; i <= width*fac / symbolSize; i++) {
     let stream = new Stream();
     stream.generateSymbols(x, 0);
-    stream.generateSymbols(x, round(random(-1000,0)));
+    stream.generateSymbols(x, round(random(-height/2,0)));
     streams.push(stream);
     x += symbolSize/fac;
   }
