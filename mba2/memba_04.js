@@ -52,7 +52,7 @@ function draw() {
 //   print(frameRate());
   tint(255,200,0,100);
   image(img1,width/2 - img1.width/2, height/2 - img1.height/2);
-  tint(255,200,0,10);
+  tint(255,200,0,20);
   image(img2,width/2 - img2.width/2, height/2 - img2.height/2);
 
 }
