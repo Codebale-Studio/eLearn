@@ -48,7 +48,7 @@ function draw() {
   streams.forEach(function(stream) {
     stream.render();
   });
-  print(frameRate());
+  // print(frameRate());
 }
 
 function Symbol(x, y, speed, first, opacity) {
