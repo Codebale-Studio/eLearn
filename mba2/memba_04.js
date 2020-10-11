@@ -6,7 +6,6 @@ let img1, img2;
 let fac = 1;
 
 function preload() {
-//   img = loadImage('assets/title_tr.png');
   img1 = loadImage('assets/comp_text.png');
   img2 = loadImage('assets/comp_img.png');
 }
@@ -45,7 +44,7 @@ function setup() {
 }
 
 function draw() {
-  background(0, 100);
+  background(0, 200);
   streams.forEach(function(stream) {
     stream.render();
   });
@@ -72,7 +71,9 @@ function Symbol(x, y, speed, first, opacity) {
 
   this.setToRandomSymbol = function() {
     if (frameCount % this.switchInterval == 0) {
-        this.value = String.fromCharCode(0x30A0 + floor(random(0, 97)));
+        this.value = String.fromCharCode(
+            0x30A0 + floor(random(0, 97))
+            );
         // set it to Katakana
         
         // if (random(10)>3){
@@ -102,7 +103,7 @@ function Symbol(x, y, speed, first, opacity) {
 function Stream() {
   this.symbols = [];
   this.totalSymbols = round(random(5, 10));
-  this.speed = random(5,15);
+  this.speed = random(5,22);
 
   this.generateSymbols = function(x, y) {
     var opacity = 255;
