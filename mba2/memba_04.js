@@ -4,6 +4,8 @@ let symbolSize = 14;
 let img, font, d, off;
 let img1, img2;
 let fac = 1;
+let input1, input2, btn;
+let iSize = 300;
 
 function preload() {
   img1 = loadImage('assets/comp_text.png');
@@ -15,6 +17,18 @@ function setup() {
     window.innerWidth,
     window.innerHeight
   );
+
+  input1 = createInput('Song name');
+  input2 = createInput('Email Id');
+  btn = createButton('Submit', '');
+
+  input1.size(iSize);  
+  input2.size(iSize);
+  btn.size(iSize);
+
+  input1.position(width/2-iSize/2,height-130);
+  input2.position(width/2-iSize/2,height-100);
+  btn.position(width/2-iSize/2, height-70);
 
   if (width<height){
     img1.resize(width,0);
@@ -50,7 +64,7 @@ function draw() {
   });
 //   print(frameRate());
   tint(255,200,0,100);
-  image(img1,width/2 - img1.width/2, height/2 - img1.height/2);
+  image(img1,width/2 - img1.width/2, height/2 - img1.height/2-30);
   tint(255,200,0,20);
   image(img2,width/2 - img2.width/2, height/2 - img2.height/2);
 
