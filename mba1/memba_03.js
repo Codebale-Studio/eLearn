@@ -3,6 +3,8 @@ let fadeInterval = 1.5;
 let symbolSize = 14;
 let img, font, d, off;
 let fac = 1;
+let input1, input2, btn;
+let iSize = 300;
 
 function preload() {
 //   img = loadImage('assets/memba_logo_color_01.png');
@@ -15,6 +17,20 @@ function setup() {
     window.innerWidth,
     window.innerHeight
   );
+  
+  input1 = createInput('Song name');
+  input2 = createInput('Email Id');
+  btn = createButton('Submit', '');
+
+  input1.size(iSize);  
+  input2.size(iSize);
+  btn.size(iSize);
+
+  input1.position(width/2-iSize/2,height-130);
+  input2.position(width/2-iSize/2,height-100);
+  btn.position(width/2-iSize/2, height-70);
+
+  
 
   if (width<height){
     img.resize(width,0);
